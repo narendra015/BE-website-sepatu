@@ -1,9 +1,8 @@
 import Cart from "../models/cart.js";
 
 export const addToCart = async (req, res) => {
-  const { quantity, size } = req.body;
+  const { product_id, quantity, size } = req.body;
   const { id: user_id } = req.user;
-  const { id: product_id } = req.product;
   try {
     await Cart.addToCart(user_id, product_id, quantity, size);
     return res.status(200).json({ message: "Product added to cart" });
