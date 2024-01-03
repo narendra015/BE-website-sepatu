@@ -7,9 +7,9 @@ export default class Product {
     price,
     description,
     category,
-    image,
-    brand,
     gender,
+    brand,
+    image,
     sizes,
     size = false,
     quantity = false
@@ -19,9 +19,9 @@ export default class Product {
     this.price = price;
     this.description = description;
     this.category = category;
-    this.image = image;
-    this.brand = brand;
     this.gender = gender;
+    this.brand = brand;
+    this.image = image;
     this.sizes = sizes;
     if (size) this.size = size;
     if (quantity) this.quantity = quantity;
